@@ -1,0 +1,69 @@
+<html>
+<head>
+<hta:application
+	id="Pseudonomize"	
+    maximizebutton = "no"
+    minimizebutton = "no"
+	/>
+<title>Randomize Data</title>
+<style type="text/css">
+	body {
+		font-family: Arial;
+		font-size: 10pt;
+	}
+	fieldset {
+		margin: 25px;
+		padding: 25px;
+	}
+	input, select, button {
+		width: 100%;
+	}
+</style>
+<script type="text/vbscript">
+	Option Explicit
+	
+	Sub Window_onLoad
+        window.resizeTo 1000, 1000
+    End Sub 
+	
+	Sub Run
+		Dim input, number, separator, header, commands, objShell
+		input = Replace(Document.getElementById("input").value, "\", "\\")
+		number = Document.getElementById("number").value
+		separator = Document.getElementById("separator").value
+		header = Document.getElementById("header").value
+		commands = Document.getElementById("commands").value
+		
+		Set objShell = CreateObject("Wscript.Shell")
+		objShell.Run "java.exe " & commands & " -cp .;../lib/routines.jar;../lib/log4j-1.2.16.jar;../lib/dom4j-1.6.1.jar;../lib/talendcsv.jar;../lib/talend_file_enhanced_20070724.jar;../lib/jxl.jar;randomize_0_1.jar; elan.randomize_0_1.Randomize --context=Default  --context_param input=""" & input & """ --context_param number=""" & number & """ --context_param separator=""" & separator & """ --context_param header=""" & header & """ %* "
+		Set objShell = Nothing
+	End Sub
+</script>
+</head>
+<body>
+	<fieldset>
+		<legend>Input file (e.g. PATIENT.tab)</legend>
+		<input type="file" id="input" />
+	</fieldset>
+	<fieldset>
+		<legend>Number of random rows</legend>
+		<input type="number" id="number" value="1000" />
+	</fieldset>
+	<fieldset>
+		<legend>Value separator (defaults to TAB)</legend>
+		<input type="text" id="separator" />
+	</fieldset>
+	<fieldset>
+		<legend>Has header row (defaults to Yes)</legend>
+		<select id="header">
+			<option value="Y" selected="selected">Yes</option>
+			<option value="N">No</option>
+		</select>
+	</fieldset>
+	<fieldset>
+		<legend>Misc. java commands</legend>
+		<input type="text" id="commands" value="-Xms256M -Xmx1024M" />
+	</fieldset>
+	<button onclick="Run">Randomize</button>
+</body>
+</html>
