@@ -909,272 +909,10 @@ public class Randomize implements TalendJob {
 		final static byte[] commonByteArrayLock_ELAN_Randomize = new byte[0];
 		static byte[] commonByteArray_ELAN_Randomize = new byte[0];
 
-		public Integer rowNumber;
+		public String value;
 
-		public Integer getRowNumber() {
-			return this.rowNumber;
-		}
-
-		public String newColumn1;
-
-		public String getNewColumn1() {
-			return this.newColumn1;
-		}
-
-		public String newColumn2;
-
-		public String getNewColumn2() {
-			return this.newColumn2;
-		}
-
-		public String newColumn3;
-
-		public String getNewColumn3() {
-			return this.newColumn3;
-		}
-
-		public String newColumn4;
-
-		public String getNewColumn4() {
-			return this.newColumn4;
-		}
-
-		public String newColumn5;
-
-		public String getNewColumn5() {
-			return this.newColumn5;
-		}
-
-		public String newColumn6;
-
-		public String getNewColumn6() {
-			return this.newColumn6;
-		}
-
-		public String newColumn7;
-
-		public String getNewColumn7() {
-			return this.newColumn7;
-		}
-
-		public String newColumn8;
-
-		public String getNewColumn8() {
-			return this.newColumn8;
-		}
-
-		public String newColumn9;
-
-		public String getNewColumn9() {
-			return this.newColumn9;
-		}
-
-		public String newColumn10;
-
-		public String getNewColumn10() {
-			return this.newColumn10;
-		}
-
-		public String newColumn11;
-
-		public String getNewColumn11() {
-			return this.newColumn11;
-		}
-
-		public String newColumn12;
-
-		public String getNewColumn12() {
-			return this.newColumn12;
-		}
-
-		public String newColumn13;
-
-		public String getNewColumn13() {
-			return this.newColumn13;
-		}
-
-		public String newColumn14;
-
-		public String getNewColumn14() {
-			return this.newColumn14;
-		}
-
-		public String newColumn15;
-
-		public String getNewColumn15() {
-			return this.newColumn15;
-		}
-
-		public String newColumn16;
-
-		public String getNewColumn16() {
-			return this.newColumn16;
-		}
-
-		public String newColumn17;
-
-		public String getNewColumn17() {
-			return this.newColumn17;
-		}
-
-		public String newColumn18;
-
-		public String getNewColumn18() {
-			return this.newColumn18;
-		}
-
-		public String newColumn19;
-
-		public String getNewColumn19() {
-			return this.newColumn19;
-		}
-
-		public String newColumn20;
-
-		public String getNewColumn20() {
-			return this.newColumn20;
-		}
-
-		public String newColumn21;
-
-		public String getNewColumn21() {
-			return this.newColumn21;
-		}
-
-		public String newColumn22;
-
-		public String getNewColumn22() {
-			return this.newColumn22;
-		}
-
-		public String newColumn23;
-
-		public String getNewColumn23() {
-			return this.newColumn23;
-		}
-
-		public String newColumn24;
-
-		public String getNewColumn24() {
-			return this.newColumn24;
-		}
-
-		public String newColumn25;
-
-		public String getNewColumn25() {
-			return this.newColumn25;
-		}
-
-		public String newColumn26;
-
-		public String getNewColumn26() {
-			return this.newColumn26;
-		}
-
-		public String newColumn27;
-
-		public String getNewColumn27() {
-			return this.newColumn27;
-		}
-
-		public String newColumn28;
-
-		public String getNewColumn28() {
-			return this.newColumn28;
-		}
-
-		public String newColumn29;
-
-		public String getNewColumn29() {
-			return this.newColumn29;
-		}
-
-		public String newColumn30;
-
-		public String getNewColumn30() {
-			return this.newColumn30;
-		}
-
-		public String newColumn31;
-
-		public String getNewColumn31() {
-			return this.newColumn31;
-		}
-
-		public String newColumn32;
-
-		public String getNewColumn32() {
-			return this.newColumn32;
-		}
-
-		public String newColumn33;
-
-		public String getNewColumn33() {
-			return this.newColumn33;
-		}
-
-		public String newColumn34;
-
-		public String getNewColumn34() {
-			return this.newColumn34;
-		}
-
-		public String newColumn35;
-
-		public String getNewColumn35() {
-			return this.newColumn35;
-		}
-
-		public String newColumn36;
-
-		public String getNewColumn36() {
-			return this.newColumn36;
-		}
-
-		public String newColumn37;
-
-		public String getNewColumn37() {
-			return this.newColumn37;
-		}
-
-		public String newColumn38;
-
-		public String getNewColumn38() {
-			return this.newColumn38;
-		}
-
-		public String newColumn39;
-
-		public String getNewColumn39() {
-			return this.newColumn39;
-		}
-
-		public String newColumn40;
-
-		public String getNewColumn40() {
-			return this.newColumn40;
-		}
-
-		private Integer readInteger(ObjectInputStream dis) throws IOException {
-			Integer intReturn;
-			int length = 0;
-			length = dis.readByte();
-			if (length == -1) {
-				intReturn = null;
-			} else {
-				intReturn = dis.readInt();
-			}
-			return intReturn;
-		}
-
-		private void writeInteger(Integer intNum, ObjectOutputStream dos)
-				throws IOException {
-			if (intNum == null) {
-				dos.writeByte(-1);
-			} else {
-				dos.writeByte(0);
-				dos.writeInt(intNum);
-			}
+		public String getValue() {
+			return this.value;
 		}
 
 		private String readString(ObjectInputStream dis) throws IOException {
@@ -1218,87 +956,7 @@ public class Randomize implements TalendJob {
 
 					int length = 0;
 
-					this.rowNumber = readInteger(dis);
-
-					this.newColumn1 = readString(dis);
-
-					this.newColumn2 = readString(dis);
-
-					this.newColumn3 = readString(dis);
-
-					this.newColumn4 = readString(dis);
-
-					this.newColumn5 = readString(dis);
-
-					this.newColumn6 = readString(dis);
-
-					this.newColumn7 = readString(dis);
-
-					this.newColumn8 = readString(dis);
-
-					this.newColumn9 = readString(dis);
-
-					this.newColumn10 = readString(dis);
-
-					this.newColumn11 = readString(dis);
-
-					this.newColumn12 = readString(dis);
-
-					this.newColumn13 = readString(dis);
-
-					this.newColumn14 = readString(dis);
-
-					this.newColumn15 = readString(dis);
-
-					this.newColumn16 = readString(dis);
-
-					this.newColumn17 = readString(dis);
-
-					this.newColumn18 = readString(dis);
-
-					this.newColumn19 = readString(dis);
-
-					this.newColumn20 = readString(dis);
-
-					this.newColumn21 = readString(dis);
-
-					this.newColumn22 = readString(dis);
-
-					this.newColumn23 = readString(dis);
-
-					this.newColumn24 = readString(dis);
-
-					this.newColumn25 = readString(dis);
-
-					this.newColumn26 = readString(dis);
-
-					this.newColumn27 = readString(dis);
-
-					this.newColumn28 = readString(dis);
-
-					this.newColumn29 = readString(dis);
-
-					this.newColumn30 = readString(dis);
-
-					this.newColumn31 = readString(dis);
-
-					this.newColumn32 = readString(dis);
-
-					this.newColumn33 = readString(dis);
-
-					this.newColumn34 = readString(dis);
-
-					this.newColumn35 = readString(dis);
-
-					this.newColumn36 = readString(dis);
-
-					this.newColumn37 = readString(dis);
-
-					this.newColumn38 = readString(dis);
-
-					this.newColumn39 = readString(dis);
-
-					this.newColumn40 = readString(dis);
+					this.value = readString(dis);
 
 				} catch (IOException e) {
 					throw new RuntimeException(e);
@@ -1312,169 +970,9 @@ public class Randomize implements TalendJob {
 		public void writeData(ObjectOutputStream dos) {
 			try {
 
-				// Integer
-
-				writeInteger(this.rowNumber, dos);
-
 				// String
 
-				writeString(this.newColumn1, dos);
-
-				// String
-
-				writeString(this.newColumn2, dos);
-
-				// String
-
-				writeString(this.newColumn3, dos);
-
-				// String
-
-				writeString(this.newColumn4, dos);
-
-				// String
-
-				writeString(this.newColumn5, dos);
-
-				// String
-
-				writeString(this.newColumn6, dos);
-
-				// String
-
-				writeString(this.newColumn7, dos);
-
-				// String
-
-				writeString(this.newColumn8, dos);
-
-				// String
-
-				writeString(this.newColumn9, dos);
-
-				// String
-
-				writeString(this.newColumn10, dos);
-
-				// String
-
-				writeString(this.newColumn11, dos);
-
-				// String
-
-				writeString(this.newColumn12, dos);
-
-				// String
-
-				writeString(this.newColumn13, dos);
-
-				// String
-
-				writeString(this.newColumn14, dos);
-
-				// String
-
-				writeString(this.newColumn15, dos);
-
-				// String
-
-				writeString(this.newColumn16, dos);
-
-				// String
-
-				writeString(this.newColumn17, dos);
-
-				// String
-
-				writeString(this.newColumn18, dos);
-
-				// String
-
-				writeString(this.newColumn19, dos);
-
-				// String
-
-				writeString(this.newColumn20, dos);
-
-				// String
-
-				writeString(this.newColumn21, dos);
-
-				// String
-
-				writeString(this.newColumn22, dos);
-
-				// String
-
-				writeString(this.newColumn23, dos);
-
-				// String
-
-				writeString(this.newColumn24, dos);
-
-				// String
-
-				writeString(this.newColumn25, dos);
-
-				// String
-
-				writeString(this.newColumn26, dos);
-
-				// String
-
-				writeString(this.newColumn27, dos);
-
-				// String
-
-				writeString(this.newColumn28, dos);
-
-				// String
-
-				writeString(this.newColumn29, dos);
-
-				// String
-
-				writeString(this.newColumn30, dos);
-
-				// String
-
-				writeString(this.newColumn31, dos);
-
-				// String
-
-				writeString(this.newColumn32, dos);
-
-				// String
-
-				writeString(this.newColumn33, dos);
-
-				// String
-
-				writeString(this.newColumn34, dos);
-
-				// String
-
-				writeString(this.newColumn35, dos);
-
-				// String
-
-				writeString(this.newColumn36, dos);
-
-				// String
-
-				writeString(this.newColumn37, dos);
-
-				// String
-
-				writeString(this.newColumn38, dos);
-
-				// String
-
-				writeString(this.newColumn39, dos);
-
-				// String
-
-				writeString(this.newColumn40, dos);
+				writeString(this.value, dos);
 
 			} catch (IOException e) {
 				throw new RuntimeException(e);
@@ -1487,47 +985,7 @@ public class Randomize implements TalendJob {
 			StringBuilder sb = new StringBuilder();
 			sb.append(super.toString());
 			sb.append("[");
-			sb.append("rowNumber=" + String.valueOf(rowNumber));
-			sb.append(",newColumn1=" + newColumn1);
-			sb.append(",newColumn2=" + newColumn2);
-			sb.append(",newColumn3=" + newColumn3);
-			sb.append(",newColumn4=" + newColumn4);
-			sb.append(",newColumn5=" + newColumn5);
-			sb.append(",newColumn6=" + newColumn6);
-			sb.append(",newColumn7=" + newColumn7);
-			sb.append(",newColumn8=" + newColumn8);
-			sb.append(",newColumn9=" + newColumn9);
-			sb.append(",newColumn10=" + newColumn10);
-			sb.append(",newColumn11=" + newColumn11);
-			sb.append(",newColumn12=" + newColumn12);
-			sb.append(",newColumn13=" + newColumn13);
-			sb.append(",newColumn14=" + newColumn14);
-			sb.append(",newColumn15=" + newColumn15);
-			sb.append(",newColumn16=" + newColumn16);
-			sb.append(",newColumn17=" + newColumn17);
-			sb.append(",newColumn18=" + newColumn18);
-			sb.append(",newColumn19=" + newColumn19);
-			sb.append(",newColumn20=" + newColumn20);
-			sb.append(",newColumn21=" + newColumn21);
-			sb.append(",newColumn22=" + newColumn22);
-			sb.append(",newColumn23=" + newColumn23);
-			sb.append(",newColumn24=" + newColumn24);
-			sb.append(",newColumn25=" + newColumn25);
-			sb.append(",newColumn26=" + newColumn26);
-			sb.append(",newColumn27=" + newColumn27);
-			sb.append(",newColumn28=" + newColumn28);
-			sb.append(",newColumn29=" + newColumn29);
-			sb.append(",newColumn30=" + newColumn30);
-			sb.append(",newColumn31=" + newColumn31);
-			sb.append(",newColumn32=" + newColumn32);
-			sb.append(",newColumn33=" + newColumn33);
-			sb.append(",newColumn34=" + newColumn34);
-			sb.append(",newColumn35=" + newColumn35);
-			sb.append(",newColumn36=" + newColumn36);
-			sb.append(",newColumn37=" + newColumn37);
-			sb.append(",newColumn38=" + newColumn38);
-			sb.append(",newColumn39=" + newColumn39);
-			sb.append(",newColumn40=" + newColumn40);
+			sb.append("value=" + value);
 			sb.append("]");
 
 			return sb.toString();
@@ -1818,6 +1276,366 @@ public class Randomize implements TalendJob {
 			return this.newColumn40;
 		}
 
+		public String newColumn41;
+
+		public String getNewColumn41() {
+			return this.newColumn41;
+		}
+
+		public String newColumn42;
+
+		public String getNewColumn42() {
+			return this.newColumn42;
+		}
+
+		public String newColumn43;
+
+		public String getNewColumn43() {
+			return this.newColumn43;
+		}
+
+		public String newColumn44;
+
+		public String getNewColumn44() {
+			return this.newColumn44;
+		}
+
+		public String newColumn45;
+
+		public String getNewColumn45() {
+			return this.newColumn45;
+		}
+
+		public String newColumn46;
+
+		public String getNewColumn46() {
+			return this.newColumn46;
+		}
+
+		public String newColumn47;
+
+		public String getNewColumn47() {
+			return this.newColumn47;
+		}
+
+		public String newColumn48;
+
+		public String getNewColumn48() {
+			return this.newColumn48;
+		}
+
+		public String newColumn49;
+
+		public String getNewColumn49() {
+			return this.newColumn49;
+		}
+
+		public String newColumn50;
+
+		public String getNewColumn50() {
+			return this.newColumn50;
+		}
+
+		public String newColumn51;
+
+		public String getNewColumn51() {
+			return this.newColumn51;
+		}
+
+		public String newColumn52;
+
+		public String getNewColumn52() {
+			return this.newColumn52;
+		}
+
+		public String newColumn53;
+
+		public String getNewColumn53() {
+			return this.newColumn53;
+		}
+
+		public String newColumn54;
+
+		public String getNewColumn54() {
+			return this.newColumn54;
+		}
+
+		public String newColumn55;
+
+		public String getNewColumn55() {
+			return this.newColumn55;
+		}
+
+		public String newColumn56;
+
+		public String getNewColumn56() {
+			return this.newColumn56;
+		}
+
+		public String newColumn57;
+
+		public String getNewColumn57() {
+			return this.newColumn57;
+		}
+
+		public String newColumn58;
+
+		public String getNewColumn58() {
+			return this.newColumn58;
+		}
+
+		public String newColumn59;
+
+		public String getNewColumn59() {
+			return this.newColumn59;
+		}
+
+		public String newColumn60;
+
+		public String getNewColumn60() {
+			return this.newColumn60;
+		}
+
+		public String newColumn61;
+
+		public String getNewColumn61() {
+			return this.newColumn61;
+		}
+
+		public String newColumn62;
+
+		public String getNewColumn62() {
+			return this.newColumn62;
+		}
+
+		public String newColumn63;
+
+		public String getNewColumn63() {
+			return this.newColumn63;
+		}
+
+		public String newColumn64;
+
+		public String getNewColumn64() {
+			return this.newColumn64;
+		}
+
+		public String newColumn65;
+
+		public String getNewColumn65() {
+			return this.newColumn65;
+		}
+
+		public String newColumn66;
+
+		public String getNewColumn66() {
+			return this.newColumn66;
+		}
+
+		public String newColumn67;
+
+		public String getNewColumn67() {
+			return this.newColumn67;
+		}
+
+		public String newColumn68;
+
+		public String getNewColumn68() {
+			return this.newColumn68;
+		}
+
+		public String newColumn69;
+
+		public String getNewColumn69() {
+			return this.newColumn69;
+		}
+
+		public String newColumn70;
+
+		public String getNewColumn70() {
+			return this.newColumn70;
+		}
+
+		public String newColumn71;
+
+		public String getNewColumn71() {
+			return this.newColumn71;
+		}
+
+		public String newColumn72;
+
+		public String getNewColumn72() {
+			return this.newColumn72;
+		}
+
+		public String newColumn73;
+
+		public String getNewColumn73() {
+			return this.newColumn73;
+		}
+
+		public String newColumn74;
+
+		public String getNewColumn74() {
+			return this.newColumn74;
+		}
+
+		public String newColumn75;
+
+		public String getNewColumn75() {
+			return this.newColumn75;
+		}
+
+		public String newColumn76;
+
+		public String getNewColumn76() {
+			return this.newColumn76;
+		}
+
+		public String newColumn77;
+
+		public String getNewColumn77() {
+			return this.newColumn77;
+		}
+
+		public String newColumn78;
+
+		public String getNewColumn78() {
+			return this.newColumn78;
+		}
+
+		public String newColumn79;
+
+		public String getNewColumn79() {
+			return this.newColumn79;
+		}
+
+		public String newColumn80;
+
+		public String getNewColumn80() {
+			return this.newColumn80;
+		}
+
+		public String newColumn81;
+
+		public String getNewColumn81() {
+			return this.newColumn81;
+		}
+
+		public String newColumn82;
+
+		public String getNewColumn82() {
+			return this.newColumn82;
+		}
+
+		public String newColumn83;
+
+		public String getNewColumn83() {
+			return this.newColumn83;
+		}
+
+		public String newColumn84;
+
+		public String getNewColumn84() {
+			return this.newColumn84;
+		}
+
+		public String newColumn85;
+
+		public String getNewColumn85() {
+			return this.newColumn85;
+		}
+
+		public String newColumn86;
+
+		public String getNewColumn86() {
+			return this.newColumn86;
+		}
+
+		public String newColumn87;
+
+		public String getNewColumn87() {
+			return this.newColumn87;
+		}
+
+		public String newColumn88;
+
+		public String getNewColumn88() {
+			return this.newColumn88;
+		}
+
+		public String newColumn89;
+
+		public String getNewColumn89() {
+			return this.newColumn89;
+		}
+
+		public String newColumn90;
+
+		public String getNewColumn90() {
+			return this.newColumn90;
+		}
+
+		public String newColumn91;
+
+		public String getNewColumn91() {
+			return this.newColumn91;
+		}
+
+		public String newColumn92;
+
+		public String getNewColumn92() {
+			return this.newColumn92;
+		}
+
+		public String newColumn93;
+
+		public String getNewColumn93() {
+			return this.newColumn93;
+		}
+
+		public String newColumn94;
+
+		public String getNewColumn94() {
+			return this.newColumn94;
+		}
+
+		public String newColumn95;
+
+		public String getNewColumn95() {
+			return this.newColumn95;
+		}
+
+		public String newColumn96;
+
+		public String getNewColumn96() {
+			return this.newColumn96;
+		}
+
+		public String newColumn97;
+
+		public String getNewColumn97() {
+			return this.newColumn97;
+		}
+
+		public String newColumn98;
+
+		public String getNewColumn98() {
+			return this.newColumn98;
+		}
+
+		public String newColumn99;
+
+		public String getNewColumn99() {
+			return this.newColumn99;
+		}
+
+		public String newColumn100;
+
+		public String getNewColumn100() {
+			return this.newColumn100;
+		}
+
 		private Integer readInteger(ObjectInputStream dis) throws IOException {
 			Integer intReturn;
 			int length = 0;
@@ -1962,6 +1780,126 @@ public class Randomize implements TalendJob {
 					this.newColumn39 = readString(dis);
 
 					this.newColumn40 = readString(dis);
+
+					this.newColumn41 = readString(dis);
+
+					this.newColumn42 = readString(dis);
+
+					this.newColumn43 = readString(dis);
+
+					this.newColumn44 = readString(dis);
+
+					this.newColumn45 = readString(dis);
+
+					this.newColumn46 = readString(dis);
+
+					this.newColumn47 = readString(dis);
+
+					this.newColumn48 = readString(dis);
+
+					this.newColumn49 = readString(dis);
+
+					this.newColumn50 = readString(dis);
+
+					this.newColumn51 = readString(dis);
+
+					this.newColumn52 = readString(dis);
+
+					this.newColumn53 = readString(dis);
+
+					this.newColumn54 = readString(dis);
+
+					this.newColumn55 = readString(dis);
+
+					this.newColumn56 = readString(dis);
+
+					this.newColumn57 = readString(dis);
+
+					this.newColumn58 = readString(dis);
+
+					this.newColumn59 = readString(dis);
+
+					this.newColumn60 = readString(dis);
+
+					this.newColumn61 = readString(dis);
+
+					this.newColumn62 = readString(dis);
+
+					this.newColumn63 = readString(dis);
+
+					this.newColumn64 = readString(dis);
+
+					this.newColumn65 = readString(dis);
+
+					this.newColumn66 = readString(dis);
+
+					this.newColumn67 = readString(dis);
+
+					this.newColumn68 = readString(dis);
+
+					this.newColumn69 = readString(dis);
+
+					this.newColumn70 = readString(dis);
+
+					this.newColumn71 = readString(dis);
+
+					this.newColumn72 = readString(dis);
+
+					this.newColumn73 = readString(dis);
+
+					this.newColumn74 = readString(dis);
+
+					this.newColumn75 = readString(dis);
+
+					this.newColumn76 = readString(dis);
+
+					this.newColumn77 = readString(dis);
+
+					this.newColumn78 = readString(dis);
+
+					this.newColumn79 = readString(dis);
+
+					this.newColumn80 = readString(dis);
+
+					this.newColumn81 = readString(dis);
+
+					this.newColumn82 = readString(dis);
+
+					this.newColumn83 = readString(dis);
+
+					this.newColumn84 = readString(dis);
+
+					this.newColumn85 = readString(dis);
+
+					this.newColumn86 = readString(dis);
+
+					this.newColumn87 = readString(dis);
+
+					this.newColumn88 = readString(dis);
+
+					this.newColumn89 = readString(dis);
+
+					this.newColumn90 = readString(dis);
+
+					this.newColumn91 = readString(dis);
+
+					this.newColumn92 = readString(dis);
+
+					this.newColumn93 = readString(dis);
+
+					this.newColumn94 = readString(dis);
+
+					this.newColumn95 = readString(dis);
+
+					this.newColumn96 = readString(dis);
+
+					this.newColumn97 = readString(dis);
+
+					this.newColumn98 = readString(dis);
+
+					this.newColumn99 = readString(dis);
+
+					this.newColumn100 = readString(dis);
 
 				} catch (IOException e) {
 					throw new RuntimeException(e);
@@ -2139,6 +2077,246 @@ public class Randomize implements TalendJob {
 
 				writeString(this.newColumn40, dos);
 
+				// String
+
+				writeString(this.newColumn41, dos);
+
+				// String
+
+				writeString(this.newColumn42, dos);
+
+				// String
+
+				writeString(this.newColumn43, dos);
+
+				// String
+
+				writeString(this.newColumn44, dos);
+
+				// String
+
+				writeString(this.newColumn45, dos);
+
+				// String
+
+				writeString(this.newColumn46, dos);
+
+				// String
+
+				writeString(this.newColumn47, dos);
+
+				// String
+
+				writeString(this.newColumn48, dos);
+
+				// String
+
+				writeString(this.newColumn49, dos);
+
+				// String
+
+				writeString(this.newColumn50, dos);
+
+				// String
+
+				writeString(this.newColumn51, dos);
+
+				// String
+
+				writeString(this.newColumn52, dos);
+
+				// String
+
+				writeString(this.newColumn53, dos);
+
+				// String
+
+				writeString(this.newColumn54, dos);
+
+				// String
+
+				writeString(this.newColumn55, dos);
+
+				// String
+
+				writeString(this.newColumn56, dos);
+
+				// String
+
+				writeString(this.newColumn57, dos);
+
+				// String
+
+				writeString(this.newColumn58, dos);
+
+				// String
+
+				writeString(this.newColumn59, dos);
+
+				// String
+
+				writeString(this.newColumn60, dos);
+
+				// String
+
+				writeString(this.newColumn61, dos);
+
+				// String
+
+				writeString(this.newColumn62, dos);
+
+				// String
+
+				writeString(this.newColumn63, dos);
+
+				// String
+
+				writeString(this.newColumn64, dos);
+
+				// String
+
+				writeString(this.newColumn65, dos);
+
+				// String
+
+				writeString(this.newColumn66, dos);
+
+				// String
+
+				writeString(this.newColumn67, dos);
+
+				// String
+
+				writeString(this.newColumn68, dos);
+
+				// String
+
+				writeString(this.newColumn69, dos);
+
+				// String
+
+				writeString(this.newColumn70, dos);
+
+				// String
+
+				writeString(this.newColumn71, dos);
+
+				// String
+
+				writeString(this.newColumn72, dos);
+
+				// String
+
+				writeString(this.newColumn73, dos);
+
+				// String
+
+				writeString(this.newColumn74, dos);
+
+				// String
+
+				writeString(this.newColumn75, dos);
+
+				// String
+
+				writeString(this.newColumn76, dos);
+
+				// String
+
+				writeString(this.newColumn77, dos);
+
+				// String
+
+				writeString(this.newColumn78, dos);
+
+				// String
+
+				writeString(this.newColumn79, dos);
+
+				// String
+
+				writeString(this.newColumn80, dos);
+
+				// String
+
+				writeString(this.newColumn81, dos);
+
+				// String
+
+				writeString(this.newColumn82, dos);
+
+				// String
+
+				writeString(this.newColumn83, dos);
+
+				// String
+
+				writeString(this.newColumn84, dos);
+
+				// String
+
+				writeString(this.newColumn85, dos);
+
+				// String
+
+				writeString(this.newColumn86, dos);
+
+				// String
+
+				writeString(this.newColumn87, dos);
+
+				// String
+
+				writeString(this.newColumn88, dos);
+
+				// String
+
+				writeString(this.newColumn89, dos);
+
+				// String
+
+				writeString(this.newColumn90, dos);
+
+				// String
+
+				writeString(this.newColumn91, dos);
+
+				// String
+
+				writeString(this.newColumn92, dos);
+
+				// String
+
+				writeString(this.newColumn93, dos);
+
+				// String
+
+				writeString(this.newColumn94, dos);
+
+				// String
+
+				writeString(this.newColumn95, dos);
+
+				// String
+
+				writeString(this.newColumn96, dos);
+
+				// String
+
+				writeString(this.newColumn97, dos);
+
+				// String
+
+				writeString(this.newColumn98, dos);
+
+				// String
+
+				writeString(this.newColumn99, dos);
+
+				// String
+
+				writeString(this.newColumn100, dos);
+
 			} catch (IOException e) {
 				throw new RuntimeException(e);
 			}
@@ -2191,6 +2369,66 @@ public class Randomize implements TalendJob {
 			sb.append(",newColumn38=" + newColumn38);
 			sb.append(",newColumn39=" + newColumn39);
 			sb.append(",newColumn40=" + newColumn40);
+			sb.append(",newColumn41=" + newColumn41);
+			sb.append(",newColumn42=" + newColumn42);
+			sb.append(",newColumn43=" + newColumn43);
+			sb.append(",newColumn44=" + newColumn44);
+			sb.append(",newColumn45=" + newColumn45);
+			sb.append(",newColumn46=" + newColumn46);
+			sb.append(",newColumn47=" + newColumn47);
+			sb.append(",newColumn48=" + newColumn48);
+			sb.append(",newColumn49=" + newColumn49);
+			sb.append(",newColumn50=" + newColumn50);
+			sb.append(",newColumn51=" + newColumn51);
+			sb.append(",newColumn52=" + newColumn52);
+			sb.append(",newColumn53=" + newColumn53);
+			sb.append(",newColumn54=" + newColumn54);
+			sb.append(",newColumn55=" + newColumn55);
+			sb.append(",newColumn56=" + newColumn56);
+			sb.append(",newColumn57=" + newColumn57);
+			sb.append(",newColumn58=" + newColumn58);
+			sb.append(",newColumn59=" + newColumn59);
+			sb.append(",newColumn60=" + newColumn60);
+			sb.append(",newColumn61=" + newColumn61);
+			sb.append(",newColumn62=" + newColumn62);
+			sb.append(",newColumn63=" + newColumn63);
+			sb.append(",newColumn64=" + newColumn64);
+			sb.append(",newColumn65=" + newColumn65);
+			sb.append(",newColumn66=" + newColumn66);
+			sb.append(",newColumn67=" + newColumn67);
+			sb.append(",newColumn68=" + newColumn68);
+			sb.append(",newColumn69=" + newColumn69);
+			sb.append(",newColumn70=" + newColumn70);
+			sb.append(",newColumn71=" + newColumn71);
+			sb.append(",newColumn72=" + newColumn72);
+			sb.append(",newColumn73=" + newColumn73);
+			sb.append(",newColumn74=" + newColumn74);
+			sb.append(",newColumn75=" + newColumn75);
+			sb.append(",newColumn76=" + newColumn76);
+			sb.append(",newColumn77=" + newColumn77);
+			sb.append(",newColumn78=" + newColumn78);
+			sb.append(",newColumn79=" + newColumn79);
+			sb.append(",newColumn80=" + newColumn80);
+			sb.append(",newColumn81=" + newColumn81);
+			sb.append(",newColumn82=" + newColumn82);
+			sb.append(",newColumn83=" + newColumn83);
+			sb.append(",newColumn84=" + newColumn84);
+			sb.append(",newColumn85=" + newColumn85);
+			sb.append(",newColumn86=" + newColumn86);
+			sb.append(",newColumn87=" + newColumn87);
+			sb.append(",newColumn88=" + newColumn88);
+			sb.append(",newColumn89=" + newColumn89);
+			sb.append(",newColumn90=" + newColumn90);
+			sb.append(",newColumn91=" + newColumn91);
+			sb.append(",newColumn92=" + newColumn92);
+			sb.append(",newColumn93=" + newColumn93);
+			sb.append(",newColumn94=" + newColumn94);
+			sb.append(",newColumn95=" + newColumn95);
+			sb.append(",newColumn96=" + newColumn96);
+			sb.append(",newColumn97=" + newColumn97);
+			sb.append(",newColumn98=" + newColumn98);
+			sb.append(",newColumn99=" + newColumn99);
+			sb.append(",newColumn100=" + newColumn100);
 			sb.append("]");
 
 			return sb.toString();
@@ -2481,6 +2719,366 @@ public class Randomize implements TalendJob {
 			return this.newColumn40;
 		}
 
+		public String newColumn41;
+
+		public String getNewColumn41() {
+			return this.newColumn41;
+		}
+
+		public String newColumn42;
+
+		public String getNewColumn42() {
+			return this.newColumn42;
+		}
+
+		public String newColumn43;
+
+		public String getNewColumn43() {
+			return this.newColumn43;
+		}
+
+		public String newColumn44;
+
+		public String getNewColumn44() {
+			return this.newColumn44;
+		}
+
+		public String newColumn45;
+
+		public String getNewColumn45() {
+			return this.newColumn45;
+		}
+
+		public String newColumn46;
+
+		public String getNewColumn46() {
+			return this.newColumn46;
+		}
+
+		public String newColumn47;
+
+		public String getNewColumn47() {
+			return this.newColumn47;
+		}
+
+		public String newColumn48;
+
+		public String getNewColumn48() {
+			return this.newColumn48;
+		}
+
+		public String newColumn49;
+
+		public String getNewColumn49() {
+			return this.newColumn49;
+		}
+
+		public String newColumn50;
+
+		public String getNewColumn50() {
+			return this.newColumn50;
+		}
+
+		public String newColumn51;
+
+		public String getNewColumn51() {
+			return this.newColumn51;
+		}
+
+		public String newColumn52;
+
+		public String getNewColumn52() {
+			return this.newColumn52;
+		}
+
+		public String newColumn53;
+
+		public String getNewColumn53() {
+			return this.newColumn53;
+		}
+
+		public String newColumn54;
+
+		public String getNewColumn54() {
+			return this.newColumn54;
+		}
+
+		public String newColumn55;
+
+		public String getNewColumn55() {
+			return this.newColumn55;
+		}
+
+		public String newColumn56;
+
+		public String getNewColumn56() {
+			return this.newColumn56;
+		}
+
+		public String newColumn57;
+
+		public String getNewColumn57() {
+			return this.newColumn57;
+		}
+
+		public String newColumn58;
+
+		public String getNewColumn58() {
+			return this.newColumn58;
+		}
+
+		public String newColumn59;
+
+		public String getNewColumn59() {
+			return this.newColumn59;
+		}
+
+		public String newColumn60;
+
+		public String getNewColumn60() {
+			return this.newColumn60;
+		}
+
+		public String newColumn61;
+
+		public String getNewColumn61() {
+			return this.newColumn61;
+		}
+
+		public String newColumn62;
+
+		public String getNewColumn62() {
+			return this.newColumn62;
+		}
+
+		public String newColumn63;
+
+		public String getNewColumn63() {
+			return this.newColumn63;
+		}
+
+		public String newColumn64;
+
+		public String getNewColumn64() {
+			return this.newColumn64;
+		}
+
+		public String newColumn65;
+
+		public String getNewColumn65() {
+			return this.newColumn65;
+		}
+
+		public String newColumn66;
+
+		public String getNewColumn66() {
+			return this.newColumn66;
+		}
+
+		public String newColumn67;
+
+		public String getNewColumn67() {
+			return this.newColumn67;
+		}
+
+		public String newColumn68;
+
+		public String getNewColumn68() {
+			return this.newColumn68;
+		}
+
+		public String newColumn69;
+
+		public String getNewColumn69() {
+			return this.newColumn69;
+		}
+
+		public String newColumn70;
+
+		public String getNewColumn70() {
+			return this.newColumn70;
+		}
+
+		public String newColumn71;
+
+		public String getNewColumn71() {
+			return this.newColumn71;
+		}
+
+		public String newColumn72;
+
+		public String getNewColumn72() {
+			return this.newColumn72;
+		}
+
+		public String newColumn73;
+
+		public String getNewColumn73() {
+			return this.newColumn73;
+		}
+
+		public String newColumn74;
+
+		public String getNewColumn74() {
+			return this.newColumn74;
+		}
+
+		public String newColumn75;
+
+		public String getNewColumn75() {
+			return this.newColumn75;
+		}
+
+		public String newColumn76;
+
+		public String getNewColumn76() {
+			return this.newColumn76;
+		}
+
+		public String newColumn77;
+
+		public String getNewColumn77() {
+			return this.newColumn77;
+		}
+
+		public String newColumn78;
+
+		public String getNewColumn78() {
+			return this.newColumn78;
+		}
+
+		public String newColumn79;
+
+		public String getNewColumn79() {
+			return this.newColumn79;
+		}
+
+		public String newColumn80;
+
+		public String getNewColumn80() {
+			return this.newColumn80;
+		}
+
+		public String newColumn81;
+
+		public String getNewColumn81() {
+			return this.newColumn81;
+		}
+
+		public String newColumn82;
+
+		public String getNewColumn82() {
+			return this.newColumn82;
+		}
+
+		public String newColumn83;
+
+		public String getNewColumn83() {
+			return this.newColumn83;
+		}
+
+		public String newColumn84;
+
+		public String getNewColumn84() {
+			return this.newColumn84;
+		}
+
+		public String newColumn85;
+
+		public String getNewColumn85() {
+			return this.newColumn85;
+		}
+
+		public String newColumn86;
+
+		public String getNewColumn86() {
+			return this.newColumn86;
+		}
+
+		public String newColumn87;
+
+		public String getNewColumn87() {
+			return this.newColumn87;
+		}
+
+		public String newColumn88;
+
+		public String getNewColumn88() {
+			return this.newColumn88;
+		}
+
+		public String newColumn89;
+
+		public String getNewColumn89() {
+			return this.newColumn89;
+		}
+
+		public String newColumn90;
+
+		public String getNewColumn90() {
+			return this.newColumn90;
+		}
+
+		public String newColumn91;
+
+		public String getNewColumn91() {
+			return this.newColumn91;
+		}
+
+		public String newColumn92;
+
+		public String getNewColumn92() {
+			return this.newColumn92;
+		}
+
+		public String newColumn93;
+
+		public String getNewColumn93() {
+			return this.newColumn93;
+		}
+
+		public String newColumn94;
+
+		public String getNewColumn94() {
+			return this.newColumn94;
+		}
+
+		public String newColumn95;
+
+		public String getNewColumn95() {
+			return this.newColumn95;
+		}
+
+		public String newColumn96;
+
+		public String getNewColumn96() {
+			return this.newColumn96;
+		}
+
+		public String newColumn97;
+
+		public String getNewColumn97() {
+			return this.newColumn97;
+		}
+
+		public String newColumn98;
+
+		public String getNewColumn98() {
+			return this.newColumn98;
+		}
+
+		public String newColumn99;
+
+		public String getNewColumn99() {
+			return this.newColumn99;
+		}
+
+		public String newColumn100;
+
+		public String getNewColumn100() {
+			return this.newColumn100;
+		}
+
 		private Integer readInteger(ObjectInputStream dis) throws IOException {
 			Integer intReturn;
 			int length = 0;
@@ -2625,6 +3223,126 @@ public class Randomize implements TalendJob {
 					this.newColumn39 = readString(dis);
 
 					this.newColumn40 = readString(dis);
+
+					this.newColumn41 = readString(dis);
+
+					this.newColumn42 = readString(dis);
+
+					this.newColumn43 = readString(dis);
+
+					this.newColumn44 = readString(dis);
+
+					this.newColumn45 = readString(dis);
+
+					this.newColumn46 = readString(dis);
+
+					this.newColumn47 = readString(dis);
+
+					this.newColumn48 = readString(dis);
+
+					this.newColumn49 = readString(dis);
+
+					this.newColumn50 = readString(dis);
+
+					this.newColumn51 = readString(dis);
+
+					this.newColumn52 = readString(dis);
+
+					this.newColumn53 = readString(dis);
+
+					this.newColumn54 = readString(dis);
+
+					this.newColumn55 = readString(dis);
+
+					this.newColumn56 = readString(dis);
+
+					this.newColumn57 = readString(dis);
+
+					this.newColumn58 = readString(dis);
+
+					this.newColumn59 = readString(dis);
+
+					this.newColumn60 = readString(dis);
+
+					this.newColumn61 = readString(dis);
+
+					this.newColumn62 = readString(dis);
+
+					this.newColumn63 = readString(dis);
+
+					this.newColumn64 = readString(dis);
+
+					this.newColumn65 = readString(dis);
+
+					this.newColumn66 = readString(dis);
+
+					this.newColumn67 = readString(dis);
+
+					this.newColumn68 = readString(dis);
+
+					this.newColumn69 = readString(dis);
+
+					this.newColumn70 = readString(dis);
+
+					this.newColumn71 = readString(dis);
+
+					this.newColumn72 = readString(dis);
+
+					this.newColumn73 = readString(dis);
+
+					this.newColumn74 = readString(dis);
+
+					this.newColumn75 = readString(dis);
+
+					this.newColumn76 = readString(dis);
+
+					this.newColumn77 = readString(dis);
+
+					this.newColumn78 = readString(dis);
+
+					this.newColumn79 = readString(dis);
+
+					this.newColumn80 = readString(dis);
+
+					this.newColumn81 = readString(dis);
+
+					this.newColumn82 = readString(dis);
+
+					this.newColumn83 = readString(dis);
+
+					this.newColumn84 = readString(dis);
+
+					this.newColumn85 = readString(dis);
+
+					this.newColumn86 = readString(dis);
+
+					this.newColumn87 = readString(dis);
+
+					this.newColumn88 = readString(dis);
+
+					this.newColumn89 = readString(dis);
+
+					this.newColumn90 = readString(dis);
+
+					this.newColumn91 = readString(dis);
+
+					this.newColumn92 = readString(dis);
+
+					this.newColumn93 = readString(dis);
+
+					this.newColumn94 = readString(dis);
+
+					this.newColumn95 = readString(dis);
+
+					this.newColumn96 = readString(dis);
+
+					this.newColumn97 = readString(dis);
+
+					this.newColumn98 = readString(dis);
+
+					this.newColumn99 = readString(dis);
+
+					this.newColumn100 = readString(dis);
 
 				} catch (IOException e) {
 					throw new RuntimeException(e);
@@ -2802,6 +3520,246 @@ public class Randomize implements TalendJob {
 
 				writeString(this.newColumn40, dos);
 
+				// String
+
+				writeString(this.newColumn41, dos);
+
+				// String
+
+				writeString(this.newColumn42, dos);
+
+				// String
+
+				writeString(this.newColumn43, dos);
+
+				// String
+
+				writeString(this.newColumn44, dos);
+
+				// String
+
+				writeString(this.newColumn45, dos);
+
+				// String
+
+				writeString(this.newColumn46, dos);
+
+				// String
+
+				writeString(this.newColumn47, dos);
+
+				// String
+
+				writeString(this.newColumn48, dos);
+
+				// String
+
+				writeString(this.newColumn49, dos);
+
+				// String
+
+				writeString(this.newColumn50, dos);
+
+				// String
+
+				writeString(this.newColumn51, dos);
+
+				// String
+
+				writeString(this.newColumn52, dos);
+
+				// String
+
+				writeString(this.newColumn53, dos);
+
+				// String
+
+				writeString(this.newColumn54, dos);
+
+				// String
+
+				writeString(this.newColumn55, dos);
+
+				// String
+
+				writeString(this.newColumn56, dos);
+
+				// String
+
+				writeString(this.newColumn57, dos);
+
+				// String
+
+				writeString(this.newColumn58, dos);
+
+				// String
+
+				writeString(this.newColumn59, dos);
+
+				// String
+
+				writeString(this.newColumn60, dos);
+
+				// String
+
+				writeString(this.newColumn61, dos);
+
+				// String
+
+				writeString(this.newColumn62, dos);
+
+				// String
+
+				writeString(this.newColumn63, dos);
+
+				// String
+
+				writeString(this.newColumn64, dos);
+
+				// String
+
+				writeString(this.newColumn65, dos);
+
+				// String
+
+				writeString(this.newColumn66, dos);
+
+				// String
+
+				writeString(this.newColumn67, dos);
+
+				// String
+
+				writeString(this.newColumn68, dos);
+
+				// String
+
+				writeString(this.newColumn69, dos);
+
+				// String
+
+				writeString(this.newColumn70, dos);
+
+				// String
+
+				writeString(this.newColumn71, dos);
+
+				// String
+
+				writeString(this.newColumn72, dos);
+
+				// String
+
+				writeString(this.newColumn73, dos);
+
+				// String
+
+				writeString(this.newColumn74, dos);
+
+				// String
+
+				writeString(this.newColumn75, dos);
+
+				// String
+
+				writeString(this.newColumn76, dos);
+
+				// String
+
+				writeString(this.newColumn77, dos);
+
+				// String
+
+				writeString(this.newColumn78, dos);
+
+				// String
+
+				writeString(this.newColumn79, dos);
+
+				// String
+
+				writeString(this.newColumn80, dos);
+
+				// String
+
+				writeString(this.newColumn81, dos);
+
+				// String
+
+				writeString(this.newColumn82, dos);
+
+				// String
+
+				writeString(this.newColumn83, dos);
+
+				// String
+
+				writeString(this.newColumn84, dos);
+
+				// String
+
+				writeString(this.newColumn85, dos);
+
+				// String
+
+				writeString(this.newColumn86, dos);
+
+				// String
+
+				writeString(this.newColumn87, dos);
+
+				// String
+
+				writeString(this.newColumn88, dos);
+
+				// String
+
+				writeString(this.newColumn89, dos);
+
+				// String
+
+				writeString(this.newColumn90, dos);
+
+				// String
+
+				writeString(this.newColumn91, dos);
+
+				// String
+
+				writeString(this.newColumn92, dos);
+
+				// String
+
+				writeString(this.newColumn93, dos);
+
+				// String
+
+				writeString(this.newColumn94, dos);
+
+				// String
+
+				writeString(this.newColumn95, dos);
+
+				// String
+
+				writeString(this.newColumn96, dos);
+
+				// String
+
+				writeString(this.newColumn97, dos);
+
+				// String
+
+				writeString(this.newColumn98, dos);
+
+				// String
+
+				writeString(this.newColumn99, dos);
+
+				// String
+
+				writeString(this.newColumn100, dos);
+
 			} catch (IOException e) {
 				throw new RuntimeException(e);
 			}
@@ -2854,6 +3812,66 @@ public class Randomize implements TalendJob {
 			sb.append(",newColumn38=" + newColumn38);
 			sb.append(",newColumn39=" + newColumn39);
 			sb.append(",newColumn40=" + newColumn40);
+			sb.append(",newColumn41=" + newColumn41);
+			sb.append(",newColumn42=" + newColumn42);
+			sb.append(",newColumn43=" + newColumn43);
+			sb.append(",newColumn44=" + newColumn44);
+			sb.append(",newColumn45=" + newColumn45);
+			sb.append(",newColumn46=" + newColumn46);
+			sb.append(",newColumn47=" + newColumn47);
+			sb.append(",newColumn48=" + newColumn48);
+			sb.append(",newColumn49=" + newColumn49);
+			sb.append(",newColumn50=" + newColumn50);
+			sb.append(",newColumn51=" + newColumn51);
+			sb.append(",newColumn52=" + newColumn52);
+			sb.append(",newColumn53=" + newColumn53);
+			sb.append(",newColumn54=" + newColumn54);
+			sb.append(",newColumn55=" + newColumn55);
+			sb.append(",newColumn56=" + newColumn56);
+			sb.append(",newColumn57=" + newColumn57);
+			sb.append(",newColumn58=" + newColumn58);
+			sb.append(",newColumn59=" + newColumn59);
+			sb.append(",newColumn60=" + newColumn60);
+			sb.append(",newColumn61=" + newColumn61);
+			sb.append(",newColumn62=" + newColumn62);
+			sb.append(",newColumn63=" + newColumn63);
+			sb.append(",newColumn64=" + newColumn64);
+			sb.append(",newColumn65=" + newColumn65);
+			sb.append(",newColumn66=" + newColumn66);
+			sb.append(",newColumn67=" + newColumn67);
+			sb.append(",newColumn68=" + newColumn68);
+			sb.append(",newColumn69=" + newColumn69);
+			sb.append(",newColumn70=" + newColumn70);
+			sb.append(",newColumn71=" + newColumn71);
+			sb.append(",newColumn72=" + newColumn72);
+			sb.append(",newColumn73=" + newColumn73);
+			sb.append(",newColumn74=" + newColumn74);
+			sb.append(",newColumn75=" + newColumn75);
+			sb.append(",newColumn76=" + newColumn76);
+			sb.append(",newColumn77=" + newColumn77);
+			sb.append(",newColumn78=" + newColumn78);
+			sb.append(",newColumn79=" + newColumn79);
+			sb.append(",newColumn80=" + newColumn80);
+			sb.append(",newColumn81=" + newColumn81);
+			sb.append(",newColumn82=" + newColumn82);
+			sb.append(",newColumn83=" + newColumn83);
+			sb.append(",newColumn84=" + newColumn84);
+			sb.append(",newColumn85=" + newColumn85);
+			sb.append(",newColumn86=" + newColumn86);
+			sb.append(",newColumn87=" + newColumn87);
+			sb.append(",newColumn88=" + newColumn88);
+			sb.append(",newColumn89=" + newColumn89);
+			sb.append(",newColumn90=" + newColumn90);
+			sb.append(",newColumn91=" + newColumn91);
+			sb.append(",newColumn92=" + newColumn92);
+			sb.append(",newColumn93=" + newColumn93);
+			sb.append(",newColumn94=" + newColumn94);
+			sb.append(",newColumn95=" + newColumn95);
+			sb.append(",newColumn96=" + newColumn96);
+			sb.append(",newColumn97=" + newColumn97);
+			sb.append(",newColumn98=" + newColumn98);
+			sb.append(",newColumn99=" + newColumn99);
+			sb.append(",newColumn100=" + newColumn100);
 			sb.append("]");
 
 			return sb.toString();
@@ -3138,6 +4156,366 @@ public class Randomize implements TalendJob {
 			return this.newColumn40;
 		}
 
+		public String newColumn41;
+
+		public String getNewColumn41() {
+			return this.newColumn41;
+		}
+
+		public String newColumn42;
+
+		public String getNewColumn42() {
+			return this.newColumn42;
+		}
+
+		public String newColumn43;
+
+		public String getNewColumn43() {
+			return this.newColumn43;
+		}
+
+		public String newColumn44;
+
+		public String getNewColumn44() {
+			return this.newColumn44;
+		}
+
+		public String newColumn45;
+
+		public String getNewColumn45() {
+			return this.newColumn45;
+		}
+
+		public String newColumn46;
+
+		public String getNewColumn46() {
+			return this.newColumn46;
+		}
+
+		public String newColumn47;
+
+		public String getNewColumn47() {
+			return this.newColumn47;
+		}
+
+		public String newColumn48;
+
+		public String getNewColumn48() {
+			return this.newColumn48;
+		}
+
+		public String newColumn49;
+
+		public String getNewColumn49() {
+			return this.newColumn49;
+		}
+
+		public String newColumn50;
+
+		public String getNewColumn50() {
+			return this.newColumn50;
+		}
+
+		public String newColumn51;
+
+		public String getNewColumn51() {
+			return this.newColumn51;
+		}
+
+		public String newColumn52;
+
+		public String getNewColumn52() {
+			return this.newColumn52;
+		}
+
+		public String newColumn53;
+
+		public String getNewColumn53() {
+			return this.newColumn53;
+		}
+
+		public String newColumn54;
+
+		public String getNewColumn54() {
+			return this.newColumn54;
+		}
+
+		public String newColumn55;
+
+		public String getNewColumn55() {
+			return this.newColumn55;
+		}
+
+		public String newColumn56;
+
+		public String getNewColumn56() {
+			return this.newColumn56;
+		}
+
+		public String newColumn57;
+
+		public String getNewColumn57() {
+			return this.newColumn57;
+		}
+
+		public String newColumn58;
+
+		public String getNewColumn58() {
+			return this.newColumn58;
+		}
+
+		public String newColumn59;
+
+		public String getNewColumn59() {
+			return this.newColumn59;
+		}
+
+		public String newColumn60;
+
+		public String getNewColumn60() {
+			return this.newColumn60;
+		}
+
+		public String newColumn61;
+
+		public String getNewColumn61() {
+			return this.newColumn61;
+		}
+
+		public String newColumn62;
+
+		public String getNewColumn62() {
+			return this.newColumn62;
+		}
+
+		public String newColumn63;
+
+		public String getNewColumn63() {
+			return this.newColumn63;
+		}
+
+		public String newColumn64;
+
+		public String getNewColumn64() {
+			return this.newColumn64;
+		}
+
+		public String newColumn65;
+
+		public String getNewColumn65() {
+			return this.newColumn65;
+		}
+
+		public String newColumn66;
+
+		public String getNewColumn66() {
+			return this.newColumn66;
+		}
+
+		public String newColumn67;
+
+		public String getNewColumn67() {
+			return this.newColumn67;
+		}
+
+		public String newColumn68;
+
+		public String getNewColumn68() {
+			return this.newColumn68;
+		}
+
+		public String newColumn69;
+
+		public String getNewColumn69() {
+			return this.newColumn69;
+		}
+
+		public String newColumn70;
+
+		public String getNewColumn70() {
+			return this.newColumn70;
+		}
+
+		public String newColumn71;
+
+		public String getNewColumn71() {
+			return this.newColumn71;
+		}
+
+		public String newColumn72;
+
+		public String getNewColumn72() {
+			return this.newColumn72;
+		}
+
+		public String newColumn73;
+
+		public String getNewColumn73() {
+			return this.newColumn73;
+		}
+
+		public String newColumn74;
+
+		public String getNewColumn74() {
+			return this.newColumn74;
+		}
+
+		public String newColumn75;
+
+		public String getNewColumn75() {
+			return this.newColumn75;
+		}
+
+		public String newColumn76;
+
+		public String getNewColumn76() {
+			return this.newColumn76;
+		}
+
+		public String newColumn77;
+
+		public String getNewColumn77() {
+			return this.newColumn77;
+		}
+
+		public String newColumn78;
+
+		public String getNewColumn78() {
+			return this.newColumn78;
+		}
+
+		public String newColumn79;
+
+		public String getNewColumn79() {
+			return this.newColumn79;
+		}
+
+		public String newColumn80;
+
+		public String getNewColumn80() {
+			return this.newColumn80;
+		}
+
+		public String newColumn81;
+
+		public String getNewColumn81() {
+			return this.newColumn81;
+		}
+
+		public String newColumn82;
+
+		public String getNewColumn82() {
+			return this.newColumn82;
+		}
+
+		public String newColumn83;
+
+		public String getNewColumn83() {
+			return this.newColumn83;
+		}
+
+		public String newColumn84;
+
+		public String getNewColumn84() {
+			return this.newColumn84;
+		}
+
+		public String newColumn85;
+
+		public String getNewColumn85() {
+			return this.newColumn85;
+		}
+
+		public String newColumn86;
+
+		public String getNewColumn86() {
+			return this.newColumn86;
+		}
+
+		public String newColumn87;
+
+		public String getNewColumn87() {
+			return this.newColumn87;
+		}
+
+		public String newColumn88;
+
+		public String getNewColumn88() {
+			return this.newColumn88;
+		}
+
+		public String newColumn89;
+
+		public String getNewColumn89() {
+			return this.newColumn89;
+		}
+
+		public String newColumn90;
+
+		public String getNewColumn90() {
+			return this.newColumn90;
+		}
+
+		public String newColumn91;
+
+		public String getNewColumn91() {
+			return this.newColumn91;
+		}
+
+		public String newColumn92;
+
+		public String getNewColumn92() {
+			return this.newColumn92;
+		}
+
+		public String newColumn93;
+
+		public String getNewColumn93() {
+			return this.newColumn93;
+		}
+
+		public String newColumn94;
+
+		public String getNewColumn94() {
+			return this.newColumn94;
+		}
+
+		public String newColumn95;
+
+		public String getNewColumn95() {
+			return this.newColumn95;
+		}
+
+		public String newColumn96;
+
+		public String getNewColumn96() {
+			return this.newColumn96;
+		}
+
+		public String newColumn97;
+
+		public String getNewColumn97() {
+			return this.newColumn97;
+		}
+
+		public String newColumn98;
+
+		public String getNewColumn98() {
+			return this.newColumn98;
+		}
+
+		public String newColumn99;
+
+		public String getNewColumn99() {
+			return this.newColumn99;
+		}
+
+		public String newColumn100;
+
+		public String getNewColumn100() {
+			return this.newColumn100;
+		}
+
 		private String readString(ObjectInputStream dis) throws IOException {
 			String strReturn = null;
 			int length = 0;
@@ -3258,6 +4636,126 @@ public class Randomize implements TalendJob {
 					this.newColumn39 = readString(dis);
 
 					this.newColumn40 = readString(dis);
+
+					this.newColumn41 = readString(dis);
+
+					this.newColumn42 = readString(dis);
+
+					this.newColumn43 = readString(dis);
+
+					this.newColumn44 = readString(dis);
+
+					this.newColumn45 = readString(dis);
+
+					this.newColumn46 = readString(dis);
+
+					this.newColumn47 = readString(dis);
+
+					this.newColumn48 = readString(dis);
+
+					this.newColumn49 = readString(dis);
+
+					this.newColumn50 = readString(dis);
+
+					this.newColumn51 = readString(dis);
+
+					this.newColumn52 = readString(dis);
+
+					this.newColumn53 = readString(dis);
+
+					this.newColumn54 = readString(dis);
+
+					this.newColumn55 = readString(dis);
+
+					this.newColumn56 = readString(dis);
+
+					this.newColumn57 = readString(dis);
+
+					this.newColumn58 = readString(dis);
+
+					this.newColumn59 = readString(dis);
+
+					this.newColumn60 = readString(dis);
+
+					this.newColumn61 = readString(dis);
+
+					this.newColumn62 = readString(dis);
+
+					this.newColumn63 = readString(dis);
+
+					this.newColumn64 = readString(dis);
+
+					this.newColumn65 = readString(dis);
+
+					this.newColumn66 = readString(dis);
+
+					this.newColumn67 = readString(dis);
+
+					this.newColumn68 = readString(dis);
+
+					this.newColumn69 = readString(dis);
+
+					this.newColumn70 = readString(dis);
+
+					this.newColumn71 = readString(dis);
+
+					this.newColumn72 = readString(dis);
+
+					this.newColumn73 = readString(dis);
+
+					this.newColumn74 = readString(dis);
+
+					this.newColumn75 = readString(dis);
+
+					this.newColumn76 = readString(dis);
+
+					this.newColumn77 = readString(dis);
+
+					this.newColumn78 = readString(dis);
+
+					this.newColumn79 = readString(dis);
+
+					this.newColumn80 = readString(dis);
+
+					this.newColumn81 = readString(dis);
+
+					this.newColumn82 = readString(dis);
+
+					this.newColumn83 = readString(dis);
+
+					this.newColumn84 = readString(dis);
+
+					this.newColumn85 = readString(dis);
+
+					this.newColumn86 = readString(dis);
+
+					this.newColumn87 = readString(dis);
+
+					this.newColumn88 = readString(dis);
+
+					this.newColumn89 = readString(dis);
+
+					this.newColumn90 = readString(dis);
+
+					this.newColumn91 = readString(dis);
+
+					this.newColumn92 = readString(dis);
+
+					this.newColumn93 = readString(dis);
+
+					this.newColumn94 = readString(dis);
+
+					this.newColumn95 = readString(dis);
+
+					this.newColumn96 = readString(dis);
+
+					this.newColumn97 = readString(dis);
+
+					this.newColumn98 = readString(dis);
+
+					this.newColumn99 = readString(dis);
+
+					this.newColumn100 = readString(dis);
 
 				} catch (IOException e) {
 					throw new RuntimeException(e);
@@ -3431,6 +4929,246 @@ public class Randomize implements TalendJob {
 
 				writeString(this.newColumn40, dos);
 
+				// String
+
+				writeString(this.newColumn41, dos);
+
+				// String
+
+				writeString(this.newColumn42, dos);
+
+				// String
+
+				writeString(this.newColumn43, dos);
+
+				// String
+
+				writeString(this.newColumn44, dos);
+
+				// String
+
+				writeString(this.newColumn45, dos);
+
+				// String
+
+				writeString(this.newColumn46, dos);
+
+				// String
+
+				writeString(this.newColumn47, dos);
+
+				// String
+
+				writeString(this.newColumn48, dos);
+
+				// String
+
+				writeString(this.newColumn49, dos);
+
+				// String
+
+				writeString(this.newColumn50, dos);
+
+				// String
+
+				writeString(this.newColumn51, dos);
+
+				// String
+
+				writeString(this.newColumn52, dos);
+
+				// String
+
+				writeString(this.newColumn53, dos);
+
+				// String
+
+				writeString(this.newColumn54, dos);
+
+				// String
+
+				writeString(this.newColumn55, dos);
+
+				// String
+
+				writeString(this.newColumn56, dos);
+
+				// String
+
+				writeString(this.newColumn57, dos);
+
+				// String
+
+				writeString(this.newColumn58, dos);
+
+				// String
+
+				writeString(this.newColumn59, dos);
+
+				// String
+
+				writeString(this.newColumn60, dos);
+
+				// String
+
+				writeString(this.newColumn61, dos);
+
+				// String
+
+				writeString(this.newColumn62, dos);
+
+				// String
+
+				writeString(this.newColumn63, dos);
+
+				// String
+
+				writeString(this.newColumn64, dos);
+
+				// String
+
+				writeString(this.newColumn65, dos);
+
+				// String
+
+				writeString(this.newColumn66, dos);
+
+				// String
+
+				writeString(this.newColumn67, dos);
+
+				// String
+
+				writeString(this.newColumn68, dos);
+
+				// String
+
+				writeString(this.newColumn69, dos);
+
+				// String
+
+				writeString(this.newColumn70, dos);
+
+				// String
+
+				writeString(this.newColumn71, dos);
+
+				// String
+
+				writeString(this.newColumn72, dos);
+
+				// String
+
+				writeString(this.newColumn73, dos);
+
+				// String
+
+				writeString(this.newColumn74, dos);
+
+				// String
+
+				writeString(this.newColumn75, dos);
+
+				// String
+
+				writeString(this.newColumn76, dos);
+
+				// String
+
+				writeString(this.newColumn77, dos);
+
+				// String
+
+				writeString(this.newColumn78, dos);
+
+				// String
+
+				writeString(this.newColumn79, dos);
+
+				// String
+
+				writeString(this.newColumn80, dos);
+
+				// String
+
+				writeString(this.newColumn81, dos);
+
+				// String
+
+				writeString(this.newColumn82, dos);
+
+				// String
+
+				writeString(this.newColumn83, dos);
+
+				// String
+
+				writeString(this.newColumn84, dos);
+
+				// String
+
+				writeString(this.newColumn85, dos);
+
+				// String
+
+				writeString(this.newColumn86, dos);
+
+				// String
+
+				writeString(this.newColumn87, dos);
+
+				// String
+
+				writeString(this.newColumn88, dos);
+
+				// String
+
+				writeString(this.newColumn89, dos);
+
+				// String
+
+				writeString(this.newColumn90, dos);
+
+				// String
+
+				writeString(this.newColumn91, dos);
+
+				// String
+
+				writeString(this.newColumn92, dos);
+
+				// String
+
+				writeString(this.newColumn93, dos);
+
+				// String
+
+				writeString(this.newColumn94, dos);
+
+				// String
+
+				writeString(this.newColumn95, dos);
+
+				// String
+
+				writeString(this.newColumn96, dos);
+
+				// String
+
+				writeString(this.newColumn97, dos);
+
+				// String
+
+				writeString(this.newColumn98, dos);
+
+				// String
+
+				writeString(this.newColumn99, dos);
+
+				// String
+
+				writeString(this.newColumn100, dos);
+
 			} catch (IOException e) {
 				throw new RuntimeException(e);
 			}
@@ -3482,6 +5220,66 @@ public class Randomize implements TalendJob {
 			sb.append(",newColumn38=" + newColumn38);
 			sb.append(",newColumn39=" + newColumn39);
 			sb.append(",newColumn40=" + newColumn40);
+			sb.append(",newColumn41=" + newColumn41);
+			sb.append(",newColumn42=" + newColumn42);
+			sb.append(",newColumn43=" + newColumn43);
+			sb.append(",newColumn44=" + newColumn44);
+			sb.append(",newColumn45=" + newColumn45);
+			sb.append(",newColumn46=" + newColumn46);
+			sb.append(",newColumn47=" + newColumn47);
+			sb.append(",newColumn48=" + newColumn48);
+			sb.append(",newColumn49=" + newColumn49);
+			sb.append(",newColumn50=" + newColumn50);
+			sb.append(",newColumn51=" + newColumn51);
+			sb.append(",newColumn52=" + newColumn52);
+			sb.append(",newColumn53=" + newColumn53);
+			sb.append(",newColumn54=" + newColumn54);
+			sb.append(",newColumn55=" + newColumn55);
+			sb.append(",newColumn56=" + newColumn56);
+			sb.append(",newColumn57=" + newColumn57);
+			sb.append(",newColumn58=" + newColumn58);
+			sb.append(",newColumn59=" + newColumn59);
+			sb.append(",newColumn60=" + newColumn60);
+			sb.append(",newColumn61=" + newColumn61);
+			sb.append(",newColumn62=" + newColumn62);
+			sb.append(",newColumn63=" + newColumn63);
+			sb.append(",newColumn64=" + newColumn64);
+			sb.append(",newColumn65=" + newColumn65);
+			sb.append(",newColumn66=" + newColumn66);
+			sb.append(",newColumn67=" + newColumn67);
+			sb.append(",newColumn68=" + newColumn68);
+			sb.append(",newColumn69=" + newColumn69);
+			sb.append(",newColumn70=" + newColumn70);
+			sb.append(",newColumn71=" + newColumn71);
+			sb.append(",newColumn72=" + newColumn72);
+			sb.append(",newColumn73=" + newColumn73);
+			sb.append(",newColumn74=" + newColumn74);
+			sb.append(",newColumn75=" + newColumn75);
+			sb.append(",newColumn76=" + newColumn76);
+			sb.append(",newColumn77=" + newColumn77);
+			sb.append(",newColumn78=" + newColumn78);
+			sb.append(",newColumn79=" + newColumn79);
+			sb.append(",newColumn80=" + newColumn80);
+			sb.append(",newColumn81=" + newColumn81);
+			sb.append(",newColumn82=" + newColumn82);
+			sb.append(",newColumn83=" + newColumn83);
+			sb.append(",newColumn84=" + newColumn84);
+			sb.append(",newColumn85=" + newColumn85);
+			sb.append(",newColumn86=" + newColumn86);
+			sb.append(",newColumn87=" + newColumn87);
+			sb.append(",newColumn88=" + newColumn88);
+			sb.append(",newColumn89=" + newColumn89);
+			sb.append(",newColumn90=" + newColumn90);
+			sb.append(",newColumn91=" + newColumn91);
+			sb.append(",newColumn92=" + newColumn92);
+			sb.append(",newColumn93=" + newColumn93);
+			sb.append(",newColumn94=" + newColumn94);
+			sb.append(",newColumn95=" + newColumn95);
+			sb.append(",newColumn96=" + newColumn96);
+			sb.append(",newColumn97=" + newColumn97);
+			sb.append(",newColumn98=" + newColumn98);
+			sb.append(",newColumn99=" + newColumn99);
+			sb.append(",newColumn100=" + newColumn100);
 			sb.append("]");
 
 			return sb.toString();
@@ -4022,6 +5820,306 @@ public class Randomize implements TalendJob {
 							row.newColumn40 = fid_tFileInputDelimited_1
 									.get(columnIndexWithD_tFileInputDelimited_1);
 
+							columnIndexWithD_tFileInputDelimited_1 = 40;
+
+							row.newColumn41 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 41;
+
+							row.newColumn42 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 42;
+
+							row.newColumn43 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 43;
+
+							row.newColumn44 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 44;
+
+							row.newColumn45 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 45;
+
+							row.newColumn46 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 46;
+
+							row.newColumn47 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 47;
+
+							row.newColumn48 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 48;
+
+							row.newColumn49 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 49;
+
+							row.newColumn50 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 50;
+
+							row.newColumn51 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 51;
+
+							row.newColumn52 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 52;
+
+							row.newColumn53 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 53;
+
+							row.newColumn54 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 54;
+
+							row.newColumn55 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 55;
+
+							row.newColumn56 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 56;
+
+							row.newColumn57 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 57;
+
+							row.newColumn58 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 58;
+
+							row.newColumn59 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 59;
+
+							row.newColumn60 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 60;
+
+							row.newColumn61 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 61;
+
+							row.newColumn62 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 62;
+
+							row.newColumn63 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 63;
+
+							row.newColumn64 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 64;
+
+							row.newColumn65 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 65;
+
+							row.newColumn66 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 66;
+
+							row.newColumn67 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 67;
+
+							row.newColumn68 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 68;
+
+							row.newColumn69 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 69;
+
+							row.newColumn70 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 70;
+
+							row.newColumn71 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 71;
+
+							row.newColumn72 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 72;
+
+							row.newColumn73 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 73;
+
+							row.newColumn74 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 74;
+
+							row.newColumn75 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 75;
+
+							row.newColumn76 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 76;
+
+							row.newColumn77 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 77;
+
+							row.newColumn78 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 78;
+
+							row.newColumn79 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 79;
+
+							row.newColumn80 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 80;
+
+							row.newColumn81 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 81;
+
+							row.newColumn82 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 82;
+
+							row.newColumn83 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 83;
+
+							row.newColumn84 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 84;
+
+							row.newColumn85 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 85;
+
+							row.newColumn86 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 86;
+
+							row.newColumn87 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 87;
+
+							row.newColumn88 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 88;
+
+							row.newColumn89 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 89;
+
+							row.newColumn90 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 90;
+
+							row.newColumn91 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 91;
+
+							row.newColumn92 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 92;
+
+							row.newColumn93 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 93;
+
+							row.newColumn94 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 94;
+
+							row.newColumn95 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 95;
+
+							row.newColumn96 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 96;
+
+							row.newColumn97 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 97;
+
+							row.newColumn98 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 98;
+
+							row.newColumn99 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 99;
+
+							row.newColumn100 = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
 							if (rowstate_tFileInputDelimited_1.getException() != null) {
 								throw rowstate_tFileInputDelimited_1
 										.getException();
@@ -4122,6 +6220,66 @@ public class Randomize implements TalendJob {
 								numberedRow_tmp.newColumn38 = row.newColumn38;
 								numberedRow_tmp.newColumn39 = row.newColumn39;
 								numberedRow_tmp.newColumn40 = row.newColumn40;
+								numberedRow_tmp.newColumn41 = row.newColumn41;
+								numberedRow_tmp.newColumn42 = row.newColumn42;
+								numberedRow_tmp.newColumn43 = row.newColumn43;
+								numberedRow_tmp.newColumn44 = row.newColumn44;
+								numberedRow_tmp.newColumn45 = row.newColumn45;
+								numberedRow_tmp.newColumn46 = row.newColumn46;
+								numberedRow_tmp.newColumn47 = row.newColumn47;
+								numberedRow_tmp.newColumn48 = row.newColumn48;
+								numberedRow_tmp.newColumn49 = row.newColumn49;
+								numberedRow_tmp.newColumn50 = row.newColumn50;
+								numberedRow_tmp.newColumn51 = row.newColumn51;
+								numberedRow_tmp.newColumn52 = row.newColumn52;
+								numberedRow_tmp.newColumn53 = row.newColumn53;
+								numberedRow_tmp.newColumn54 = row.newColumn54;
+								numberedRow_tmp.newColumn55 = row.newColumn55;
+								numberedRow_tmp.newColumn56 = row.newColumn56;
+								numberedRow_tmp.newColumn57 = row.newColumn57;
+								numberedRow_tmp.newColumn58 = row.newColumn58;
+								numberedRow_tmp.newColumn59 = row.newColumn59;
+								numberedRow_tmp.newColumn60 = row.newColumn60;
+								numberedRow_tmp.newColumn61 = row.newColumn61;
+								numberedRow_tmp.newColumn62 = row.newColumn62;
+								numberedRow_tmp.newColumn63 = row.newColumn63;
+								numberedRow_tmp.newColumn64 = row.newColumn64;
+								numberedRow_tmp.newColumn65 = row.newColumn65;
+								numberedRow_tmp.newColumn66 = row.newColumn66;
+								numberedRow_tmp.newColumn67 = row.newColumn67;
+								numberedRow_tmp.newColumn68 = row.newColumn68;
+								numberedRow_tmp.newColumn69 = row.newColumn69;
+								numberedRow_tmp.newColumn70 = row.newColumn70;
+								numberedRow_tmp.newColumn71 = row.newColumn71;
+								numberedRow_tmp.newColumn72 = row.newColumn72;
+								numberedRow_tmp.newColumn73 = row.newColumn73;
+								numberedRow_tmp.newColumn74 = row.newColumn74;
+								numberedRow_tmp.newColumn75 = row.newColumn75;
+								numberedRow_tmp.newColumn76 = row.newColumn76;
+								numberedRow_tmp.newColumn77 = row.newColumn77;
+								numberedRow_tmp.newColumn78 = row.newColumn78;
+								numberedRow_tmp.newColumn79 = row.newColumn79;
+								numberedRow_tmp.newColumn80 = row.newColumn80;
+								numberedRow_tmp.newColumn81 = row.newColumn81;
+								numberedRow_tmp.newColumn82 = row.newColumn82;
+								numberedRow_tmp.newColumn83 = row.newColumn83;
+								numberedRow_tmp.newColumn84 = row.newColumn84;
+								numberedRow_tmp.newColumn85 = row.newColumn85;
+								numberedRow_tmp.newColumn86 = row.newColumn86;
+								numberedRow_tmp.newColumn87 = row.newColumn87;
+								numberedRow_tmp.newColumn88 = row.newColumn88;
+								numberedRow_tmp.newColumn89 = row.newColumn89;
+								numberedRow_tmp.newColumn90 = row.newColumn90;
+								numberedRow_tmp.newColumn91 = row.newColumn91;
+								numberedRow_tmp.newColumn92 = row.newColumn92;
+								numberedRow_tmp.newColumn93 = row.newColumn93;
+								numberedRow_tmp.newColumn94 = row.newColumn94;
+								numberedRow_tmp.newColumn95 = row.newColumn95;
+								numberedRow_tmp.newColumn96 = row.newColumn96;
+								numberedRow_tmp.newColumn97 = row.newColumn97;
+								numberedRow_tmp.newColumn98 = row.newColumn98;
+								numberedRow_tmp.newColumn99 = row.newColumn99;
+								numberedRow_tmp.newColumn100 = row.newColumn100;
 								numberedRow = numberedRow_tmp;
 								// ###############################
 
@@ -4198,6 +6356,66 @@ public class Randomize implements TalendJob {
 									selectedRow.newColumn38 = numberedRow.newColumn38;
 									selectedRow.newColumn39 = numberedRow.newColumn39;
 									selectedRow.newColumn40 = numberedRow.newColumn40;
+									selectedRow.newColumn41 = numberedRow.newColumn41;
+									selectedRow.newColumn42 = numberedRow.newColumn42;
+									selectedRow.newColumn43 = numberedRow.newColumn43;
+									selectedRow.newColumn44 = numberedRow.newColumn44;
+									selectedRow.newColumn45 = numberedRow.newColumn45;
+									selectedRow.newColumn46 = numberedRow.newColumn46;
+									selectedRow.newColumn47 = numberedRow.newColumn47;
+									selectedRow.newColumn48 = numberedRow.newColumn48;
+									selectedRow.newColumn49 = numberedRow.newColumn49;
+									selectedRow.newColumn50 = numberedRow.newColumn50;
+									selectedRow.newColumn51 = numberedRow.newColumn51;
+									selectedRow.newColumn52 = numberedRow.newColumn52;
+									selectedRow.newColumn53 = numberedRow.newColumn53;
+									selectedRow.newColumn54 = numberedRow.newColumn54;
+									selectedRow.newColumn55 = numberedRow.newColumn55;
+									selectedRow.newColumn56 = numberedRow.newColumn56;
+									selectedRow.newColumn57 = numberedRow.newColumn57;
+									selectedRow.newColumn58 = numberedRow.newColumn58;
+									selectedRow.newColumn59 = numberedRow.newColumn59;
+									selectedRow.newColumn60 = numberedRow.newColumn60;
+									selectedRow.newColumn61 = numberedRow.newColumn61;
+									selectedRow.newColumn62 = numberedRow.newColumn62;
+									selectedRow.newColumn63 = numberedRow.newColumn63;
+									selectedRow.newColumn64 = numberedRow.newColumn64;
+									selectedRow.newColumn65 = numberedRow.newColumn65;
+									selectedRow.newColumn66 = numberedRow.newColumn66;
+									selectedRow.newColumn67 = numberedRow.newColumn67;
+									selectedRow.newColumn68 = numberedRow.newColumn68;
+									selectedRow.newColumn69 = numberedRow.newColumn69;
+									selectedRow.newColumn70 = numberedRow.newColumn70;
+									selectedRow.newColumn71 = numberedRow.newColumn71;
+									selectedRow.newColumn72 = numberedRow.newColumn72;
+									selectedRow.newColumn73 = numberedRow.newColumn73;
+									selectedRow.newColumn74 = numberedRow.newColumn74;
+									selectedRow.newColumn75 = numberedRow.newColumn75;
+									selectedRow.newColumn76 = numberedRow.newColumn76;
+									selectedRow.newColumn77 = numberedRow.newColumn77;
+									selectedRow.newColumn78 = numberedRow.newColumn78;
+									selectedRow.newColumn79 = numberedRow.newColumn79;
+									selectedRow.newColumn80 = numberedRow.newColumn80;
+									selectedRow.newColumn81 = numberedRow.newColumn81;
+									selectedRow.newColumn82 = numberedRow.newColumn82;
+									selectedRow.newColumn83 = numberedRow.newColumn83;
+									selectedRow.newColumn84 = numberedRow.newColumn84;
+									selectedRow.newColumn85 = numberedRow.newColumn85;
+									selectedRow.newColumn86 = numberedRow.newColumn86;
+									selectedRow.newColumn87 = numberedRow.newColumn87;
+									selectedRow.newColumn88 = numberedRow.newColumn88;
+									selectedRow.newColumn89 = numberedRow.newColumn89;
+									selectedRow.newColumn90 = numberedRow.newColumn90;
+									selectedRow.newColumn91 = numberedRow.newColumn91;
+									selectedRow.newColumn92 = numberedRow.newColumn92;
+									selectedRow.newColumn93 = numberedRow.newColumn93;
+									selectedRow.newColumn94 = numberedRow.newColumn94;
+									selectedRow.newColumn95 = numberedRow.newColumn95;
+									selectedRow.newColumn96 = numberedRow.newColumn96;
+									selectedRow.newColumn97 = numberedRow.newColumn97;
+									selectedRow.newColumn98 = numberedRow.newColumn98;
+									selectedRow.newColumn99 = numberedRow.newColumn99;
+									selectedRow.newColumn100 = numberedRow.newColumn100;
 									nb_line_ok_tFilterRow_1++;
 								} else {
 									nb_line_reject_tFilterRow_1++;
@@ -4225,48 +6443,28 @@ public class Randomize implements TalendJob {
 															.valueOf(selectedRow.rowNumber))
 													.concat(" selected"));
 
-									outputRow.rowNumber = selectedRow.rowNumber;
-									outputRow.newColumn1 = selectedRow.newColumn1;
-									outputRow.newColumn2 = selectedRow.newColumn2;
-									outputRow.newColumn3 = selectedRow.newColumn3;
-									outputRow.newColumn4 = selectedRow.newColumn4;
-									outputRow.newColumn5 = selectedRow.newColumn5;
-									outputRow.newColumn6 = selectedRow.newColumn6;
-									outputRow.newColumn7 = selectedRow.newColumn7;
-									outputRow.newColumn8 = selectedRow.newColumn8;
-									outputRow.newColumn9 = selectedRow.newColumn9;
-									outputRow.newColumn10 = selectedRow.newColumn10;
-									outputRow.newColumn11 = selectedRow.newColumn11;
-									outputRow.newColumn12 = selectedRow.newColumn12;
-									outputRow.newColumn13 = selectedRow.newColumn13;
-									outputRow.newColumn14 = selectedRow.newColumn14;
-									outputRow.newColumn15 = selectedRow.newColumn15;
-									outputRow.newColumn16 = selectedRow.newColumn16;
-									outputRow.newColumn17 = selectedRow.newColumn17;
-									outputRow.newColumn18 = selectedRow.newColumn18;
-									outputRow.newColumn19 = selectedRow.newColumn19;
-									outputRow.newColumn20 = selectedRow.newColumn20;
-									outputRow.newColumn21 = selectedRow.newColumn21;
-									outputRow.newColumn22 = selectedRow.newColumn22;
-									outputRow.newColumn23 = selectedRow.newColumn23;
-									outputRow.newColumn24 = selectedRow.newColumn24;
-									outputRow.newColumn25 = selectedRow.newColumn25;
-									outputRow.newColumn26 = selectedRow.newColumn26;
-									outputRow.newColumn27 = selectedRow.newColumn27;
-									outputRow.newColumn28 = selectedRow.newColumn28;
-									outputRow.newColumn29 = selectedRow.newColumn29;
-									outputRow.newColumn30 = selectedRow.newColumn30;
-									outputRow.newColumn31 = selectedRow.newColumn31;
-									outputRow.newColumn32 = selectedRow.newColumn32;
-									outputRow.newColumn33 = selectedRow.newColumn33;
-									outputRow.newColumn34 = selectedRow.newColumn34;
-									outputRow.newColumn35 = selectedRow.newColumn35;
-									outputRow.newColumn36 = selectedRow.newColumn36;
-									outputRow.newColumn37 = selectedRow.newColumn37;
-									outputRow.newColumn38 = selectedRow.newColumn38;
-									outputRow.newColumn39 = selectedRow.newColumn39;
-									outputRow.newColumn40 = selectedRow.newColumn40;
+									ArrayList<String> values = new ArrayList<String>();
 
+									for (int i = 1; i < 101; i++) {
+										Object o = selectedRow
+												.getClass()
+												.getDeclaredMethod(
+														"getNewColumn".concat(String
+																.valueOf(i)))
+												.invoke(selectedRow);
+										values.add(o.toString());
+									}
+
+									outputRow.value = String
+											.join((context.separator.isEmpty() ? "\t"
+													: context.separator),
+													values)
+											.replaceFirst(
+													"[".concat(
+															(context.separator
+																	.isEmpty() ? "\\t"
+																	: context.separator))
+															.concat("]+$"), "");
 									nb_line_tJavaRow_1++;
 
 									tos_count_tJavaRow_1++;
@@ -4282,243 +6480,9 @@ public class Randomize implements TalendJob {
 									currentComponent = "tFileOutputDelimited_1";
 
 									StringBuilder sb_tFileOutputDelimited_1 = new StringBuilder();
-									if (outputRow.newColumn1 != null) {
+									if (outputRow.value != null) {
 										sb_tFileOutputDelimited_1
-												.append(outputRow.newColumn1);
-									}
-									sb_tFileOutputDelimited_1
-											.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (outputRow.newColumn2 != null) {
-										sb_tFileOutputDelimited_1
-												.append(outputRow.newColumn2);
-									}
-									sb_tFileOutputDelimited_1
-											.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (outputRow.newColumn3 != null) {
-										sb_tFileOutputDelimited_1
-												.append(outputRow.newColumn3);
-									}
-									sb_tFileOutputDelimited_1
-											.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (outputRow.newColumn4 != null) {
-										sb_tFileOutputDelimited_1
-												.append(outputRow.newColumn4);
-									}
-									sb_tFileOutputDelimited_1
-											.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (outputRow.newColumn5 != null) {
-										sb_tFileOutputDelimited_1
-												.append(outputRow.newColumn5);
-									}
-									sb_tFileOutputDelimited_1
-											.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (outputRow.newColumn6 != null) {
-										sb_tFileOutputDelimited_1
-												.append(outputRow.newColumn6);
-									}
-									sb_tFileOutputDelimited_1
-											.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (outputRow.newColumn7 != null) {
-										sb_tFileOutputDelimited_1
-												.append(outputRow.newColumn7);
-									}
-									sb_tFileOutputDelimited_1
-											.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (outputRow.newColumn8 != null) {
-										sb_tFileOutputDelimited_1
-												.append(outputRow.newColumn8);
-									}
-									sb_tFileOutputDelimited_1
-											.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (outputRow.newColumn9 != null) {
-										sb_tFileOutputDelimited_1
-												.append(outputRow.newColumn9);
-									}
-									sb_tFileOutputDelimited_1
-											.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (outputRow.newColumn10 != null) {
-										sb_tFileOutputDelimited_1
-												.append(outputRow.newColumn10);
-									}
-									sb_tFileOutputDelimited_1
-											.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (outputRow.newColumn11 != null) {
-										sb_tFileOutputDelimited_1
-												.append(outputRow.newColumn11);
-									}
-									sb_tFileOutputDelimited_1
-											.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (outputRow.newColumn12 != null) {
-										sb_tFileOutputDelimited_1
-												.append(outputRow.newColumn12);
-									}
-									sb_tFileOutputDelimited_1
-											.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (outputRow.newColumn13 != null) {
-										sb_tFileOutputDelimited_1
-												.append(outputRow.newColumn13);
-									}
-									sb_tFileOutputDelimited_1
-											.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (outputRow.newColumn14 != null) {
-										sb_tFileOutputDelimited_1
-												.append(outputRow.newColumn14);
-									}
-									sb_tFileOutputDelimited_1
-											.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (outputRow.newColumn15 != null) {
-										sb_tFileOutputDelimited_1
-												.append(outputRow.newColumn15);
-									}
-									sb_tFileOutputDelimited_1
-											.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (outputRow.newColumn16 != null) {
-										sb_tFileOutputDelimited_1
-												.append(outputRow.newColumn16);
-									}
-									sb_tFileOutputDelimited_1
-											.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (outputRow.newColumn17 != null) {
-										sb_tFileOutputDelimited_1
-												.append(outputRow.newColumn17);
-									}
-									sb_tFileOutputDelimited_1
-											.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (outputRow.newColumn18 != null) {
-										sb_tFileOutputDelimited_1
-												.append(outputRow.newColumn18);
-									}
-									sb_tFileOutputDelimited_1
-											.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (outputRow.newColumn19 != null) {
-										sb_tFileOutputDelimited_1
-												.append(outputRow.newColumn19);
-									}
-									sb_tFileOutputDelimited_1
-											.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (outputRow.newColumn20 != null) {
-										sb_tFileOutputDelimited_1
-												.append(outputRow.newColumn20);
-									}
-									sb_tFileOutputDelimited_1
-											.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (outputRow.newColumn21 != null) {
-										sb_tFileOutputDelimited_1
-												.append(outputRow.newColumn21);
-									}
-									sb_tFileOutputDelimited_1
-											.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (outputRow.newColumn22 != null) {
-										sb_tFileOutputDelimited_1
-												.append(outputRow.newColumn22);
-									}
-									sb_tFileOutputDelimited_1
-											.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (outputRow.newColumn23 != null) {
-										sb_tFileOutputDelimited_1
-												.append(outputRow.newColumn23);
-									}
-									sb_tFileOutputDelimited_1
-											.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (outputRow.newColumn24 != null) {
-										sb_tFileOutputDelimited_1
-												.append(outputRow.newColumn24);
-									}
-									sb_tFileOutputDelimited_1
-											.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (outputRow.newColumn25 != null) {
-										sb_tFileOutputDelimited_1
-												.append(outputRow.newColumn25);
-									}
-									sb_tFileOutputDelimited_1
-											.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (outputRow.newColumn26 != null) {
-										sb_tFileOutputDelimited_1
-												.append(outputRow.newColumn26);
-									}
-									sb_tFileOutputDelimited_1
-											.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (outputRow.newColumn27 != null) {
-										sb_tFileOutputDelimited_1
-												.append(outputRow.newColumn27);
-									}
-									sb_tFileOutputDelimited_1
-											.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (outputRow.newColumn28 != null) {
-										sb_tFileOutputDelimited_1
-												.append(outputRow.newColumn28);
-									}
-									sb_tFileOutputDelimited_1
-											.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (outputRow.newColumn29 != null) {
-										sb_tFileOutputDelimited_1
-												.append(outputRow.newColumn29);
-									}
-									sb_tFileOutputDelimited_1
-											.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (outputRow.newColumn30 != null) {
-										sb_tFileOutputDelimited_1
-												.append(outputRow.newColumn30);
-									}
-									sb_tFileOutputDelimited_1
-											.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (outputRow.newColumn31 != null) {
-										sb_tFileOutputDelimited_1
-												.append(outputRow.newColumn31);
-									}
-									sb_tFileOutputDelimited_1
-											.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (outputRow.newColumn32 != null) {
-										sb_tFileOutputDelimited_1
-												.append(outputRow.newColumn32);
-									}
-									sb_tFileOutputDelimited_1
-											.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (outputRow.newColumn33 != null) {
-										sb_tFileOutputDelimited_1
-												.append(outputRow.newColumn33);
-									}
-									sb_tFileOutputDelimited_1
-											.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (outputRow.newColumn34 != null) {
-										sb_tFileOutputDelimited_1
-												.append(outputRow.newColumn34);
-									}
-									sb_tFileOutputDelimited_1
-											.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (outputRow.newColumn35 != null) {
-										sb_tFileOutputDelimited_1
-												.append(outputRow.newColumn35);
-									}
-									sb_tFileOutputDelimited_1
-											.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (outputRow.newColumn36 != null) {
-										sb_tFileOutputDelimited_1
-												.append(outputRow.newColumn36);
-									}
-									sb_tFileOutputDelimited_1
-											.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (outputRow.newColumn37 != null) {
-										sb_tFileOutputDelimited_1
-												.append(outputRow.newColumn37);
-									}
-									sb_tFileOutputDelimited_1
-											.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (outputRow.newColumn38 != null) {
-										sb_tFileOutputDelimited_1
-												.append(outputRow.newColumn38);
-									}
-									sb_tFileOutputDelimited_1
-											.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (outputRow.newColumn39 != null) {
-										sb_tFileOutputDelimited_1
-												.append(outputRow.newColumn39);
-									}
-									sb_tFileOutputDelimited_1
-											.append(OUT_DELIM_tFileOutputDelimited_1);
-									if (outputRow.newColumn40 != null) {
-										sb_tFileOutputDelimited_1
-												.append(outputRow.newColumn40);
+												.append(outputRow.value);
 									}
 									sb_tFileOutputDelimited_1
 											.append(OUT_DELIM_ROWSEP_tFileOutputDelimited_1);
@@ -5170,6 +7134,6 @@ public class Randomize implements TalendJob {
 	ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- * 140728 characters generated by Talend Open Studio for Data Integration on the
- * October 16, 2018 5:51:28 PM CEST
+ * 182370 characters generated by Talend Open Studio for Data Integration on the
+ * October 18, 2018 1:57:17 PM CEST
  ************************************************************************************************/
