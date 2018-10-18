@@ -14,8 +14,8 @@
   - dateFormat: java SimpleDateFormat value to detect dates
   - saveMapping: saves a CSV file with ID to pseudo-ID mapping (defaults to N)
 - Use:
-  - GUI (Windows only): Pseudonomizer.hta
-  - Command line (from the folder that contains Pseudonomizer.jar):
+  - GUI (Windows only): pseudonomize.hta
+  - Command line (from the folder that contains pseudonomize.jar):
 ```
 java.exe -cp .;../lib/routines.jar;../lib/commons-collections-3.2.2.jar;../lib/log4j-1.2.15.jar;../lib/log4j-1.2.16.jar;../lib/dom4j-1.6.1.jar;../lib/thashfile.jar;../lib/talendcsv.jar;../lib/trove.jar;../lib/jakarta-oro-2.0.8.jar;../lib/talend_file_enhanced_20070724.jar;../lib/advancedPersistentLookupLib-1.0.jar;../lib/jboss-serialization.jar;pseudonomize_0_1.jar; elan.pseudonomize_0_1.Pseudonomize --context_param folder="..." --context_param input="..." etc.
 ```
