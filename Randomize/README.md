@@ -1,5 +1,7 @@
 # Randomize
 - Picks a random number of rows from a delimited data file.
+- Prerequisites:
+  - A maximum of 100 columns per file is supported.
 - Parameters:
   - input: input file
   - number: number of rows to extract
