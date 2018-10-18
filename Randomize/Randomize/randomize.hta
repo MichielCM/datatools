@@ -35,7 +35,7 @@
 		commands = Document.getElementById("commands").value
 		
 		Set objShell = CreateObject("Wscript.Shell")
-		objShell.Run "java.exe " & commands & " -cp .;../lib/routines.jar;../lib/log4j-1.2.16.jar;../lib/dom4j-1.6.1.jar;../lib/talendcsv.jar;../lib/talend_file_enhanced_20070724.jar;../lib/jxl.jar;randomize_0_1.jar; elan.randomize_0_1.Randomize --context=Default  --context_param input=""" & input & """ --context_param number=""" & number & """ --context_param separator=""" & separator & """ --context_param header=""" & header & """ %* "
+		objShell.Run "java.exe " & commands & " -cp .;../lib/routines.jar;../lib/log4j-1.2.16.jar;../lib/dom4j-1.6.1.jar;../lib/talendcsv.jar;../lib/talend_file_enhanced_20070724.jar;../lib/jxl.jar;randomize_0_1.jar; elan.randomize_0_1.Randomize --context_param input=""" & input & """ --context_param number=""" & number & """ --context_param separator=""" & separator & """ --context_param header=""" & header & """ %* "
 		Set objShell = Nothing
 	End Sub
 </script>
